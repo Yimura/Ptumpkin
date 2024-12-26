@@ -10,4 +10,4 @@ ENV USER=container HOME=/home/container
 
 WORKDIR /home/container
 
-ENTRYPOINT [ "/bin/ash" ]
+ENTRYPOINT [ "/bin/ash", "-c" ]
