@@ -10,4 +10,6 @@ ENV USER=container HOME=/home/container
 
 WORKDIR /home/container
 
-ENTRYPOINT [ "/bin/pumpkin" ]
+COPY entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT [ "/bin/ash", "/entrypoint.sh" ]

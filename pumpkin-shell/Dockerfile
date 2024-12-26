@@ -11,4 +11,6 @@ ENV USER=container HOME=/home/container
 
 WORKDIR /home/container
 
-ENTRYPOINT [ "/bin/ash" ]
+COPY entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT [ "/bin/ash", "/entrypoint.sh" ]
