@@ -43,5 +43,4 @@ jobs:
         with:
           file: ${{ matrix.image }}/Dockerfile
           push: true
-          tags: ${{ matrix.image }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: ${{ env.REGISTRY }}/${{ github.repository}}:${{ matrix.image }}
