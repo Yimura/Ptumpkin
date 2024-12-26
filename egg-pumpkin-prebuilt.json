@@ -1,0 +1,31 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": null
+    },
+    "exported_at": "2024-12-26T21:04:25+01:00",
+    "name": "Pumpkin",
+    "author": "andreas@damon.sh",
+    "description": "This is the Pumpkin variant of Minecraft Servers made from scratch in Rust.",
+    "features": null,
+    "docker_images": {
+        "latest": "ghcr.io\/yimura\/ptumpkin:pumpkin-prebuilt"
+    },
+    "file_denylist": [],
+    "startup": "\/bin\/pumpkin",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"Started Server took\"\r\n}",
+        "logs": "{}",
+        "stop": "stop"
+    },
+    "scripts": {
+        "installation": {
+            "script": null,
+            "container": "rust:1-alpine3.21",
+            "entrypoint": "ash"
+        }
+    },
+    "variables": []
+}
