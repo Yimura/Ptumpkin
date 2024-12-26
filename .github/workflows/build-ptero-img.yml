@@ -38,9 +38,13 @@ jobs:
       - name: Docker Buildx
         uses: docker/setup-buildx-action@v3
 
+      - name: Lowercase for image tagging
+        run: |
+          echo "REPO=${GITHUB_REPOSITORY@L}" >> "${GITHUB_ENV}"
+
       - name: Build and Push
         uses: docker/build-push-action@v6
         with:
           file: ${{ matrix.image }}/Dockerfile
           push: true
-          tags: ${{ env.REGISTRY }}/${{ github.repository}}:${{ matrix.image }}
+          tags: ${{ env.REGISTRY }}/${{ env.REPO }}:${{ matrix.image }}
